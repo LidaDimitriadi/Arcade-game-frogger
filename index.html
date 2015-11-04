@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Effective JavaScript: Frogger</title>
+    <link href='https://fonts.googleapis.com/css?family=Gorditas:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <h1>Welcome to Frogger!</h1>
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
+    <div id="gameStats">
+        <div id="score">
+            <h2 id="topScore"></h2>
+            <h2 id="myScore"></h2>
+        </div>
+        <div id="lives">
+            <span class="entypo-heart"></span>
+            <h2 id="myLives"></h2>
+        </div>    
+    </div>
+    <div id="description">
+        <h2 id="frogger">Frogger Arcade Game</h2>
+        <p>The goal is to reach the river collecting all the Gems! You have 3 lives, and by colliding with a bug you loose one life! Your score is set to zero everytime you loose! Have fun!! :)</p>
+    </div>
 </body>
 </html>

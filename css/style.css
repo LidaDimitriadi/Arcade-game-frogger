@@ -1,3 +1,52 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo|zocial);
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
 body {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-family: 'Gorditas', cursive;
+}
+
+#gameStats {
+	width: 300px;
+	display: none;
+}
+
+#description {
+	width: 300px;
+	display: block;
+	margin-left: 10px;
+}
+
+canvas {
+	margin-left: 538px;
+	margin-top: 10px;
+	font-family: 'Gorditas', cursive;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h1 {
+	width: 100%;
+	text-align: center;
+}
+
+.entypo-heart {
+	color: white;
+	font-size: 40px;
+}
+
+#frogger {
+	font-size: 30px;
+}
+
+p {
+	font-size: 25px;
 }
