@@ -3,27 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Effective JavaScript: Frogger</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Gorditas:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Welcome to Frogger!</h1>
+    <div class="container">
+        <h1 class="row header text-center">Welcome to Frogger!</h1>
+        <div class="row" id="gameRow">
+            <div class="col-md-4 col-xs-12" id="gameStats">
+                <div class="row">
+                    <div class="col-md-12" id="score">
+                        <h2 id="topScore"></h2>
+                        <h2 id="myScore"></h2>
+                    </div>
+                    <div class="col-md-12" id="lives">
+                        <span class="entypo-heart"></span>
+                        <h2 id="myLives"></h2>
+                    </div>
+                    <div class="col-md-12" id="description">
+                        <h2 id="frogger">Frogger Arcade Game</h2>
+                        <p>The goal is to reach the river collecting all the Gems! You have 3 lives, and by colliding with a bug you loose one life! Your score is set to zero everytime you loose! Have fun!! :)</p>
+                    </div>
+                </div>    
+            </div>
+            
+        </div>
+    </div>
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
-    <div id="gameStats">
-        <div id="score">
-            <h2 id="topScore"></h2>
-            <h2 id="myScore"></h2>
-        </div>
-        <div id="lives">
-            <span class="entypo-heart"></span>
-            <h2 id="myLives"></h2>
-        </div>    
-    </div>
-    <div id="description">
-        <h2 id="frogger">Frogger Arcade Game</h2>
-        <p>The goal is to reach the river collecting all the Gems! You have 3 lives, and by colliding with a bug you loose one life! Your score is set to zero everytime you loose! Have fun!! :)</p>
-    </div>
 </body>
 </html>

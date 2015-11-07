@@ -14,20 +14,22 @@ body {
     font-family: 'Gorditas', cursive;
 }
 
+.header {
+	margin-bottom: 1em;
+	margin-left: initial;
+	width: inherit;
+}
+
 #gameStats {
-	width: 300px;
-	display: none;
+	display: block;
 }
 
 #description {
-	width: 300px;
 	display: block;
 	margin-left: 10px;
 }
 
 canvas {
-	margin-left: 538px;
-	margin-top: 10px;
 	font-family: 'Gorditas', cursive;
     font-size: 40px;
     font-weight: bold;
@@ -49,4 +51,10 @@ h1 {
 
 p {
 	font-size: 25px;
+}
+
+@media screen and (max-width: 510px) {
+	canvas {
+		width: 100%;
+	}
 }

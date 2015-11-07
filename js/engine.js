@@ -5,17 +5,24 @@
 */
 
 var currentState = "Start";  //starting state of the game 
+var div = document.createElement('div');
+div.id = 'game';
+div.className = 'col-md-8 col-xs-12';
+var Parent = document.getElementById('gameRow');
+var Child = Parent.firstChild;
+Parent.insertBefore(div, Child);
 
 var Engine = (function(global) {
-    var doc = global.document,
-        win = global.window,
-        canvas = doc.createElement('canvas'),
-        ctx = canvas.getContext('2d'),
-        lastTime;
+    //var doc = global.document;
+    var win = global.window;
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+    var lastTime;
+    //div.appendChild(canvas);
 
     canvas.width = 505;
     canvas.height = 606;
-    doc.body.appendChild(canvas);
+    div.appendChild(canvas);
 
      
     function main() {
@@ -167,10 +174,10 @@ var Engine = (function(global) {
         console.log(currentState);  
         switch (currentState) {                     //I check the current state
             case "Running":             //if I am in the game I render the correct background and the entities
-                document.getElementById('gameStats').style.display = 'block';  //I make the gameStats div appear
+                document.getElementById('lives').style.display = 'block';
+                document.getElementById('score').style.display = 'block';
                 document.getElementById('topScore').innerHTML = "Your score:";
                 document.getElementById('myScore').innerHTML = player.score;
-                document.getElementById('lives').style.display = 'block';
                 document.getElementById('myLives').innerHTML = player.life;
                 document.getElementById('description').style.display = 'none';  //and I hide the descriptions div
                 ctx.fillStyle = 'black';
@@ -254,6 +261,8 @@ var Engine = (function(global) {
         player5 = new Image(100, 100);
         player5.src = 'images/char-princess-girl.png';
         ctx.drawImage(player5, 300, 300);
+        document.getElementById('score').style.display = 'none';
+        document.getElementById('lives').style.display = 'none';
     }
 
     function renderGameOverScreen() {       //this is the game over screen
@@ -276,6 +285,7 @@ var Engine = (function(global) {
         document.getElementById('topScore').innerHTML = "Your highest score is:";
         document.getElementById('myScore').innerHTML = player.score;
         document.getElementById('lives').style.display = 'none';
+        document.getElementById('description').style.display = 'none';
      }
 
 
@@ -365,7 +375,8 @@ window.addEventListener( 'keyup', function(e) {
     if (e.keyCode == 32) {
         currentState = "Start";
         player.lives = 3;
-        document.getElementById('gameStats').style.display = 'none';
+        document.getElementById('lives').style.display = 'none';
+        document.getElementById('score').style.display = 'none';
         document.getElementById('description').style.display = 'block';
         player.score = 0;
         player.life = 3;
