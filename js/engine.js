@@ -323,26 +323,27 @@ var Engine = (function(global) {
 
 var choosePlayer = function(evt) {     //this is the functions that handles the click event for the player choice
     //i change each time the player.sprite to the appropriate
+    console.log("x= " + event.pageX + "");
     if (event.pageY >= 300 && event.pageY < 400) {  //first row of characters
-        if (event.pageX >= 600 && event.pageX < 700 ){  //first character
+        if (event.pageX >= 400 && event.pageX < 500 ){  //first character
             console.log("first");
             player.sprite = 'images/char-boy.png';
         }
-        if (event.pageX >= 750 && event.pageX < 850 ){  //second character
+        if (event.pageX >= 550 && event.pageX < 650 ){  //second character
             console.log("second");
             player.sprite = 'images/char-cat-girl.png';
         }
-        if (event.pageX >= 900 && event.pageX < 1000 ){  //third character
+        if (event.pageX >= 700 && event.pageX < 800 ){  //third character
             console.log("third"); 
             player.sprite = 'images/char-horn-girl.png';
         }
     }
     if (event.pageY >= 440 && event.pageY < 550) {  //second row of characters
-       if (event.pageX >= 650 && event.pageX < 750 ){  //first character
+       if (event.pageX >= 450 && event.pageX < 550 ){  //first character
             console.log("fourth");
             player.sprite = 'images/char-pink-girl.png';
         }
-        if (event.pageX >= 850 && event.pageX < 950 ){  //first character
+        if (event.pageX >= 650 && event.pageX < 750 ){  //first character
             console.log("fifth");
             player.sprite = 'images/char-princess-girl.png';
         } 
